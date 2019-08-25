@@ -1,0 +1,22 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t zuzutw/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true zuzutw/react npm run test
+
+after_success:
+  - docker build -t zuzutw/multi-client -f ./client
+  - docker build -t zuzutw/multi-nginx ./nginx
+  - docker build -t zuzutw/multi-server ./server
+  - docker build -t zuzutw/react-worker ./worker
+  # Login to docker hub
+  - docker login -u "$DOCKER_ID" --p "$DOCKER_PASSWORD"
+  # Push the production images to docker hub
+  - docker push zuzutw/multi-client
+  - docker push zuzutw/multi-nginx
+  - docker push zuzutw/multi-server
+  - docker push zuzutw/react-worker
