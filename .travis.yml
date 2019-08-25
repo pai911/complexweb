@@ -21,6 +21,7 @@ after_success:
   - docker push zuzutw/multi-server
   - docker push zuzutw/multi-worker
 
+
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-1"
