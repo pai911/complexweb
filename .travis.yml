@@ -28,8 +28,6 @@ deploy:
   env: "MultiDocker-env"
   bucket_name: "elasticbeanstalk-ap-northeast-1-073252906284"
   bucker_path: "docker-multi"
-  file:
-    - "Dockerrun.aws.json"
   on:
     branch: master
   access_key_id:
