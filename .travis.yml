@@ -9,14 +9,14 @@ script:
   - docker run -e CI=true zuzutw/react-test npm run test
 
 after_success:
-  - docker build -t zuzutw/multi-client -f ./client
+  - docker build -t zuzutw/multi-client ./client
   - docker build -t zuzutw/multi-nginx ./nginx
   - docker build -t zuzutw/multi-server ./server
-  - docker build -t zuzutw/react-worker ./worker
+  - docker build -t zuzutw/multi-worker ./worker
   # Login to docker hub
   - docker login -u "$DOCKER_ID" --p "$DOCKER_PASSWORD"
   # Push the production images to docker hub
   - docker push zuzutw/multi-client
   - docker push zuzutw/multi-nginx
   - docker push zuzutw/multi-server
-  - docker push zuzutw/react-worker
+  - docker push zuzutw/multi-worker
