@@ -1,6 +1,6 @@
 # complexweb
 
-A sample project for learning Docker & Docker Compose with mutiple services
+A sample project for learning Docker & Docker Compose with mutiple services based on this [course] (https://www.udemy.com/docker-and-kubernetes-the-complete-guide/) on Udemy
 
 ## Architecture
 ![Project Architecture](https://www.lucidchart.com/publicSegments/view/16d8d308-75dc-4446-9016-5a2752f13ceb/image.png)
@@ -11,3 +11,8 @@ docker-compose.yml
 
 ## Nginx Configuration
 default.cong
+
+## Getting Started (Dev)
+docker-compose up --build
+Nagigate browser to: http://localhost:3050
+
