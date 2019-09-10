@@ -13,8 +13,11 @@ after_success:
   - docker build -t zuzutw/multi-nginx ./nginx
   - docker build -t zuzutw/multi-server ./server
   - docker build -t zuzutw/multi-worker ./worker
-  # Login to docker hub
-  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
+  # Method 1: Login to docker hub
+  # - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
+  # Method 2: Using STDIN prevents the password from ending up in the shell’s history, or log-files
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  
   # Push the production images to docker hub
   - docker push zuzutw/multi-client
   - docker push zuzutw/multi-nginx
