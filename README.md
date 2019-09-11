@@ -19,4 +19,6 @@ default.conf
 
 ## Getting Started (CI & Prod)
 - .travis.yml
-- Run Data services on AWS: PostgreSQL and Redis
+- Run Data services on AWS: 
+  - PostgreSQL: AWS RDS
+  - Redis: AWS Elastic Cache
