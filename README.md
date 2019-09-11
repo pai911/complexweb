@@ -10,9 +10,13 @@ A sample project for learning Docker & Docker Compose with mutiple services base
 docker-compose.yml
 
 ## Nginx Configuration
-default.cong
+default.conf
 
 ## Getting Started (Dev)
-docker-compose up --build
-Nagigate browser to: http://localhost:3050
+- docker-compose up --build
+- Nagigate the browser to: http://localhost:3050
+- Run Data services inside the containers: PostgreSQL and Redis
 
+## Getting Started (CI & Prod)
+- .travis.yml
+- Run Data services on AWS: PostgreSQL and Redis
