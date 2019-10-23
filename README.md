@@ -16,7 +16,9 @@ default.conf
 - Use docker-compose to start all containers
   - `docker-compose up --build`
 - Nagigate the browser to: http://localhost:3050
-- Run Data services inside the containers: PostgreSQL and Redis
+- Run Data services inside the containers: 
+  - PostgreSQL (Use Docker Hub image)
+  - Redis (Use Docker Hub image)
 
 ## Getting Started (CI & Prod)
 - Container Deployment: Elastic Beanstalk
