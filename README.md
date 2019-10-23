@@ -13,12 +13,14 @@ docker-compose.yml
 default.conf
 
 ## Getting Started (Dev)
-- docker-compose up --build
+- Use docker-compose to start all containers
+  - `docker-compose up --build`
 - Nagigate the browser to: http://localhost:3050
 - Run Data services inside the containers: PostgreSQL and Redis
 
 ## Getting Started (CI & Prod)
-- .travis.yml
-- Run Data services on AWS: 
+- Container Deployment: Elastic Beanstalk
+  - Config: `Dockerrun.aws.json`
+- Use Managed Data services on AWS: 
   - PostgreSQL: AWS RDS
   - Redis: AWS Elastic Cache
