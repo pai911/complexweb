@@ -8,13 +8,13 @@ A sample project for learning `Docker` & `Docker Compose` with mutiple services 
 
 ## Dev
 ### Config
-  - client
+  - client (react app)
     - ./client/Dockerfile.dev
-  - nginx
+  - nginx (static files / routing)
     - ./nginx/Dockerfile.dev
-  - server
+  - server (Node.js server)
     - ./server/Dockerfile.dev
-  - worker
+  - worker (Node.js app)
     - ./worker/Dockerfile.dev
   - Docker Compose: `docker-compose.yml`
 ### Getting Started
@@ -27,13 +27,13 @@ A sample project for learning `Docker` & `Docker Compose` with mutiple services 
 
 ## Production
 ### Config
-  - client
+  - client (react app)
     - ./client/Dockerfile
-  - nginx
+  - nginx (static files / routing)
     - ./nginx/Dockerfile
-  - server
+  - server (Node.js server)
     - ./server/Dockerfile
-  - worker
+  - worker (Node.js app)
     - ./worker/Dockerfile
   - Elastic Beanstalk Docker Config: `Dockerrun.aws.json`
 ## Getting Started
